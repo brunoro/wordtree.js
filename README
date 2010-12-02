@@ -4,6 +4,5 @@ Passos para utilização:
 
 - Gerar árvore JSON de entrada usando o inputmaker.py
   $ python inputmaker.py <arquivo de entrada> <primeira palavra>
-- Colocar árvore JSON como a variável jsonFromHtml no wordtree.js.
-  Depois eu vou colocar isso no main.html
+- Colocar árvore JSON no campo de texto do main.html
 - Abrir o main.html
