@@ -32,18 +32,20 @@ Raphael.fn.connection = function (obj1, obj2, line, bg){
 };
 
 /* constantes */
+sizex = 800;
+sizey = 400;
 // TODO: colocar aqui todos os parametros fixos (cores, fontes, etc)
 offx = 50;
 // TODO: setar valor de offy por número de coisas no fim da árvore
 offy = 25;
 dotdist = 5;
 //TODO: setar tamanho da fonte por número total de elementos
-maxfont = 80;
+maxfont = 80; 
 count = 0;
 clicada = 0;
 
 //window.onload = function(){
-	// TODO: centralizar no meio da página (subpaper raphael?)
+// TODO: centralizar no meio da página (subpaper raphael?)
 function renderJSON(canvas, final, px, py, prof, lim, inity)
 {
     var n = 0;
@@ -88,12 +90,11 @@ function renderJSON(canvas, final, px, py, prof, lim, inity)
         "font-size": maxfont * final.num/(maxnum + 2) + 5,
         "font-family": "Trebuchet MS"
     });
-
+            
     /* ultima coluna */
     /* coloca posição */
     if((prof == lim) || (final.filho.length == 0))
     {
-            
         /* corta texto muito grande */
         // TODO: fazer texto ocupar máximo de espaço possível usando maxfont
         tstr = texto.attr("text");
@@ -159,16 +160,21 @@ function renderJSON(canvas, final, px, py, prof, lim, inity)
     var arvore = eval('(' + '{ "key": "Dilma", "num": 11, "filho": [  { "key": " aparece  na  sequência,  com  23%,  e  Marina  Silva  tem  22% ", "num": 1, "filho": [  ]},  { "key": " se  referia  às  críticas  feita  por  Serra  nesta  segunda-feira  ao  Programa  de  Aceleração  do  Crescimento  (PAC)  em  reunião  com  empresários  em  Minas  Gerais ", "num": 1, "filho": [  ]},  { "key": " teria  reclamado  até  que  sequer  viu  o  texto ", "num": 1, "filho": [  ]},  { "key": " era  a  responsável  pela  gestão  do  programa  quando  estava  no  governo  federal ", "num": 1, "filho": [  ]},  { "key": " irá  a  Belo  Horizonte,  Ouro  Preto,  Diamantina ", "num": 1, "filho": [  ]},  { "key": " deixará  o  cargo  de  ministra  da  Casa  Civil  para  se  consagrar  exclusivamente  à  pré-campanha,  que  dura  até  o  fim  de  junho,  quando  a  lei  eleitoral  estabelece  o  início  oficial  do  pleito  presidencial ", "num": 1, "filho": [  ]},  { "key": "ainda", "num": 2, "filho": [    { "key": " não  rebolou,  mas  já  cantou  alguns  versinhos  de  El  Dia  que  Me  Quieras,  famosa  na  voz  de  Carlos  Gardel,  para  José  Luiz  Datena,  da  TV  Record ", "num": 1, "filho": [    ]},    { "key": " poderá  esticar  sua  viagem  a  Londrina,  onde  visitaria  um  call  center ", "num": 1, "filho": [    ]}  ]},  { "key": " disse  que ", "num": 2, "filho": [    { "key": " achou  `muito  estranho`  os  elogios  da  oposição  ao  governo ", "num": 1, "filho": [    ]},    { "key": " foi  lá  para  se  encontrar  com  a  primeira-dama  Marisa  Letícia,  para  `uma  conversa  entre  mulheres`  e  comentou  que  espera  poder  contar  com  ajuda  dela  na  campanha,  ressalvando  que  não  foi  este  o  assunto  que  a  levou  à  atual  sede  do  governo ", "num": 1, "filho": [    ]}  ]},  { "key": "nega", "num": 1, "filho": [  ]}]}' +')' );
     */
     
-function drawWordtree(jsonFromHtml)
+function drawWordtree(jsonFromHtml, offx_, offy_, dotdist_, maxfont_)
 {
-    // TODO: fazer esse jsonFromHtml funcionar
+    count = 0;
+    clicada = 0;
+    offx = parseInt(offx_);
+    offy = parseInt(offy_);
+    dotdist = parseInt(dotdist_);
+    maxfont = parseInt(maxfont_);
+
     var arvore = eval('(' + jsonFromHtml + ')');
-    //TODO: parametrizar esses valores
-    var area = Raphael("main", 800, 400);
 
     /* seta tamanho máximo */
     maxnum = arvore.num;
             
+    area = Raphael("main", sizex, sizey);
     renderJSON(area, arvore, 10, 50, 0, 6, 0);
 }
 //}
