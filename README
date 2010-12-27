@@ -6,3 +6,5 @@ Passos para utilização:
   $ python inputmaker.py <arquivo de entrada> <primeira palavra>
 - Colocar árvore JSON no campo de texto do main.html
 - Abrir o main.html
+
+TODO: translate this readme and the whole thing to english
