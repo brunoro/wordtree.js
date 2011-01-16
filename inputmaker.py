@@ -70,8 +70,8 @@ def arvoreSemLista(final):
 
 def frasesPalavraInicial(raw, palavra):
     # TODO: fazer a palavra ser regex e depois uniformizar nas strings
-    regexp = "\.[\s]+" + palavra + "[^\.]*"
-    raw = "." + raw # gambs para regex sempre funcionar
+    regexp = "\.[\s]*" + palavra + "[^\.]*"
+    raw = "." + raw.strip("\n") # gambs para regex sempre funcionar
     raw.replace('"', ' ')
     return re.findall(regexp, raw)
 
@@ -102,21 +102,20 @@ teste = [
 
 # lembrar de retirar aspas das coisas
 entrada = open(sys.argv[1])
-linhas = entrada.readlines()
+inicial = sys.argv[2]
+
+frases = [frasesPalavraInicial(i, inicial) for i in entrada]
+text = []
+for frase in frases:
+    if len(frase) > 0:
+    	text.append(frase[0][1:].replace('"', "`"))
+
 entrada.close()
 
-inicial = sys.argv[2]
-frases = [frasesPalavraInicial(i, inicial) for i in linhas]
-text = []
-for frase in teste:
-    if len(frase) > 0:
-    	text.append(frase[0][2:].replace('"', "`"))
-
-print text
+#print text
 arv = fazArvoreBruta(text)
 arv = arvoreSemLista(arv)
 
 #print final
-#imprime(final,0)
 fazJsonArvore(arv,0)
 print
