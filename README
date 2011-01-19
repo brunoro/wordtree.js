@@ -1,10 +1,17 @@
-Essa é uma implementação do wordtree em javascript.
+wordtree.js
+===========
 
-Passos para utilização:
+An implementation of wordtree in Raphaël SVG + jQuery + python
 
-- Gerar árvore JSON de entrada usando o inputmaker.py
-  $ python inputmaker.py <arquivo de entrada> <primeira palavra>
-- Colocar árvore JSON no campo de texto do main.html
-- Abrir o main.html
+How-to
+------
+- Make an input file with a phrase on each line
+- Generate the input JSON tree with inputmaker.py
+    $ python inputmaker.py <input file> <word on the root>
+- Open main.html
 
-TODO: translate this readme and the whole thing to english
+TODO
+----
+- translate the code to English
+- write a cool webapp to use it on realtime
+- fix the canvas size
