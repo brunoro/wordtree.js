@@ -1,14 +1,14 @@
 wordtree.js
 ===========
 
-An implementation of wordtree in Raphaël SVG + jQuery + python
+An implementation of [wordtree](http://www-958.ibm.com/software/data/cognos/manyeyes/page/Word_Tree.html) in Raphaël SVG + jQuery + python
 
 How-to
 ------
-- Make an input file with a phrase on each line
-- Generate the input JSON tree with inputmaker.py
-    $ python inputmaker.py <input file> <word on the root>
-- Open main.html
+1. make an input file with a phrase on each line
+2. generate the input json tree with inputmaker.py
+    $ python inputmaker.py <input file> <root word>
+3. open main.html and paste the json tree on the textarea
 
 TODO
 ----
