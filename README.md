@@ -7,7 +7,7 @@ How-to
 ------
 - Make an input file with a phrase on each line
 - Generate the input JSON tree with inputmaker.py
-    $ python inputmaker.py <input file> <word on the root>
+    $ python jsontree.py <input file> <word on the root>
 - Open main.html
 
 TODO
