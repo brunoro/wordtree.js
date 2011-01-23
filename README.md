@@ -13,5 +13,5 @@ How-to
 TODO
 ----
 - translate the code to English
-- write a cool webapp to use it on realtime
-- fix the canvas size
+- write a cool (django | web2py) webapp for testing
+- fix the SVG canvas size
