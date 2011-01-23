@@ -1,0 +1,14 @@
+application: wordtreejs
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  script: main.py
+
+- url: /jsontree
+  script: main.py
+
+- url: /js
+  static_dir: static/js
