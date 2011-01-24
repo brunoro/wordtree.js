@@ -1,7 +1,7 @@
 wordtree.js
 ===========
 
-An implementation of [wordtree](http://www-958.ibm.com/software/data/cognos/manyeyes/page/Word_Tree.html) in Raphaël SVG + jQuery + python. The testapp is written on python webapp framework and is already deployed on http://wordtreejs.appspot.com
+An implementation of [wordtree](http://www-958.ibm.com/software/data/cognos/manyeyes/page/Word_Tree.html) in Raphaël SVG + jQuery + python. The testapp is written on python webapp framework and is already deployed on [wordtreejs.appspot.com](http://wordtreejs.appspot.com)
 
 How-to
 ------
