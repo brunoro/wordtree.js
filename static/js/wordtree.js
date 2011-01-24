@@ -35,7 +35,7 @@ Raphael.fn.connection = function (obj1, obj2, line, bg){
 count = 0;
 clicked = 0;
 
-/* default values (for no CSS) */
+/* default parameters */
 /* sizes */
 sizex = 800;
 sizey = 400;
@@ -83,9 +83,9 @@ function renderJSON(canvas, subtree, px, py, prof, lim, inity)
         {
             canvas.clear();
             count = 0;
-            maxnum = ripper.num;
+            maxnum = tree.num;
             clicked = 0;
-            renderJSON(canvas, ripper, 10, 50, 0, 6, 0);
+            renderJSON(canvas, tree, 10, 50, 0, 6, 0);
         }
     });
 
@@ -160,22 +160,18 @@ function renderJSON(canvas, subtree, px, py, prof, lim, inity)
     return new Array(n, ldot);
 }
 
-function drawWordtree(jsonFromHtml, offx_, offy_, dotdist_, maxfont_)
+function drawWordtree(jsonFromHtml)
 {
     count = 0;
     clicked = 0;
-    offx = parseInt(offx_);
-    offy = parseInt(offy_);
-    dotdist = parseInt(dotdist_);
-    maxfont = parseInt(maxfont_);
 
-    var arvore = eval('(' + jsonFromHtml + ')');
+    var tree = eval('(' + jsonFromHtml + ')');
 
     /* seta tamanho máximo */
-    maxnum = arvore.num;
+    maxnum = tree.num;
             
     area = Raphael("wordtree", sizex, sizey);
-    renderJSON(area, arvore, 10, 50, 0, 6, 0);
+    renderJSON(area, tree, 10, 50, 0, 6, 0);
 }
 //}
 //printTree(ripper);

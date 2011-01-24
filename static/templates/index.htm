@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> wordtree.js </title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script language="javascript" src="js/raphael.js" charset="utf-8"></script>
         <script language="javascript" src="js/jquery.js" charset="utf-8"></script>
         <script language="javascript" src="js/wordtree.js" charset="utf-8"></script>
@@ -29,17 +30,13 @@
     </head>
         <h1> da wordztreeh </h1>
         <div id="data">
-            <p> word:    <input id="start" value="Cruzeiro"></p>
+            <p> word:    <input id="start" value="Cruzeiro"/></p>
             <p> text:    <textarea id="text" rows="10" cols="50">
 Cruzeiro is a great brazilian football team 
 Cruzeiro is a team from Belo Horizonte
 Cruzeiro had great players like Tostão, Alex and Sorin
 Cruzeiro has won 2 Brasileiros and 2 Libertadores
             </textarea> </p>
-            <p> offx:    <input id="offx" value="50"></p>
-            <p> offy:    <input id="offy" value="25"></p>
-            <p> dotdist: <input id="dotdist" value="5"></p>
-            <p> maxfont: <input id="maxfont" value="80"></p>
             <button onclick="redrawTree()">do it!</button>
         <div id="wordtree">
         </div>

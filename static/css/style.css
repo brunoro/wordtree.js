@@ -1,0 +1,9 @@
+body
+{
+    font-family: "Trebuchet MS", "Helvetica Neue", sans-serif;
+}
+
+textarea, input
+{
+    vertical-align: text-top;
+}

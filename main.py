@@ -21,7 +21,7 @@ import jsontree
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write(template.render('templates/index.htm', {}))
+        self.response.out.write(template.render('static/templates/index.htm', {}))
 
 class JsonTreeHandler(webapp.RequestHandler):
     def post(self):

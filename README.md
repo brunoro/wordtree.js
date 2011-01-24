@@ -18,7 +18,7 @@ How-to
 
 TODO
 ----
-- make the options be read from CSS
+- make the options and parameters be read from CSS
 - fix the SVG canvas size
 - fix the textsize
-- test it! 
+- test it!
